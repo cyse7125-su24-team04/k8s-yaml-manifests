@@ -1,9 +1,7 @@
+---
 name: Lint YAML files
 
 on:
-  push:
-    branches:
-      - main
   pull_request:
     branches:
       - main
@@ -12,7 +10,6 @@ jobs:
   lint:
     name: Lint YAML files
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v2
