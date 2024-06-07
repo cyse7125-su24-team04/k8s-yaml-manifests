@@ -13,9 +13,11 @@ spec:
       labels:
         app: caddy
     spec:
+      imagePullSecrets:
+        - name: caddy-secrets
       containers:
         - name: caddy
-          image: mihiradelkar/static-site:latest
+          image: vamsidharp/static-site-test:latest
           ports:
             - containerPort: 8080
           readinessProbe:
